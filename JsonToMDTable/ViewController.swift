@@ -11,6 +11,7 @@ class ViewController: NSViewController {
 
     @IBOutlet var textView: NSTextView!
     @IBOutlet weak var menuButton: NSPopUpButton!
+    @IBOutlet weak var partMenuButton: NSPopUpButton!
     
     let conver = Conver()
     
@@ -21,7 +22,10 @@ class ViewController: NSViewController {
         let index = menuButton.indexOfSelectedItem;
         let title = itmes[index]
         self.conver.formatStr = title;
-        print("这里是个title：\(title)")
+        let style = partMenuButton.indexOfSelectedItem;
+        self.conver.style = style;
+        
+        print("这里是个title：\(title)-\(style)")
     }
 
     override var representedObject: Any? {
@@ -30,6 +34,12 @@ class ViewController: NSViewController {
         }
     }
 
+    @IBAction func handleFormateStyle(_ sender: NSPopUpButton) {
+        let index = sender.indexOfSelectedItem;
+        self.conver.style = index;
+        print("这里是个title\(index)")
+    }
+    
     @IBAction func handleMenu(_ sender: NSPopUpButton) {
         let itmes = sender.itemTitles
         let index = sender.indexOfSelectedItem;

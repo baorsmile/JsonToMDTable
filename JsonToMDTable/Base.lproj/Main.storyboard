@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17156"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17506"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -700,7 +700,7 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="67" y="565"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
@@ -740,7 +740,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="44"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uly-L9-Igf">
-                                        <rect key="frame" x="13" y="4" width="84" height="32"/>
+                                        <rect key="frame" x="12" y="4" width="78" height="33"/>
                                         <buttonCell key="cell" type="push" title="Conver" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ajb-Tl-MZs">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -749,8 +749,9 @@
                                             <action selector="handleConverButton:" target="XfG-lQ-9wD" id="E4i-oG-k1g"/>
                                         </connections>
                                     </button>
-                                    <popUpButton horizontalHuggingPriority="249" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jEI-td-AVT">
-                                        <rect key="frame" x="110" y="8" width="353" height="25"/>
+                                    <popUpButton horizontalHuggingPriority="249" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jEI-td-AVT">
+                                        <rect key="frame" x="88" y="8" width="249" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <popUpButtonCell key="cell" type="push" title="| ~~%@~~ | ~~%@~~ | -- |" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="uOY-96-QgL" id="vFp-Vu-7Nb">
                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="menu"/>
@@ -762,19 +763,32 @@
                                             </menu>
                                         </popUpButtonCell>
                                         <connections>
-                                            <action selector="handleMenu:" target="XfG-lQ-9wD" id="RMI-T1-v4I"/>
+                                            <action selector="handleMenu:" target="XfG-lQ-9wD" id="FAb-7S-Cge"/>
+                                        </connections>
+                                    </popUpButton>
+                                    <popUpButton horizontalHuggingPriority="249" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1GC-jF-SGb">
+                                        <rect key="frame" x="338" y="8" width="134" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <popUpButtonCell key="cell" type="push" title="整体" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="SuS-5i-dQL" id="0Jv-xn-Yxy">
+                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="menu"/>
+                                            <menu key="menu" id="S9F-s3-XbV">
+                                                <items>
+                                                    <menuItem title="整体" state="on" id="SuS-5i-dQL"/>
+                                                    <menuItem title="分组" id="FgX-Uj-sN3"/>
+                                                </items>
+                                            </menu>
+                                        </popUpButtonCell>
+                                        <connections>
+                                            <action selector="handleFormateStyle:" target="XfG-lQ-9wD" id="Dk7-5r-Xij"/>
                                         </connections>
                                     </popUpButton>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="jEI-td-AVT" secondAttribute="bottom" constant="11" id="9ko-Yb-bOp"/>
                                     <constraint firstAttribute="bottom" secondItem="uly-L9-Igf" secondAttribute="bottom" constant="11" id="Fig-1F-Xrf"/>
                                     <constraint firstItem="uly-L9-Igf" firstAttribute="top" secondItem="6nJ-lg-d3v" secondAttribute="top" constant="12" id="GTP-9M-WNW"/>
-                                    <constraint firstItem="jEI-td-AVT" firstAttribute="leading" secondItem="uly-L9-Igf" secondAttribute="trailing" constant="21" id="Ixp-RM-r0b"/>
                                     <constraint firstItem="uly-L9-Igf" firstAttribute="leading" secondItem="6nJ-lg-d3v" secondAttribute="leading" constant="19" id="KzE-z0-t9a"/>
-                                    <constraint firstItem="jEI-td-AVT" firstAttribute="top" secondItem="6nJ-lg-d3v" secondAttribute="top" constant="12" id="QxS-Ix-amG"/>
                                     <constraint firstAttribute="height" constant="44" id="TQh-Rd-PeO"/>
-                                    <constraint firstAttribute="trailing" secondItem="jEI-td-AVT" secondAttribute="trailing" constant="20" symbolic="YES" id="rcA-j7-1Gl"/>
                                 </constraints>
                             </customView>
                         </subviews>
@@ -789,13 +803,14 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="menuButton" destination="jEI-td-AVT" id="2hg-1Y-tcG"/>
+                        <outlet property="menuButton" destination="jEI-td-AVT" id="eVj-zT-nPe"/>
+                        <outlet property="partMenuButton" destination="1GC-jF-SGb" id="hIU-Pe-j9A"/>
                         <outlet property="textView" destination="fon-W2-R1y" id="Shh-lL-ep3"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="67" y="1008"/>
         </scene>
     </scenes>
 </document>
